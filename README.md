@@ -17,7 +17,7 @@ This project is a simple **Ticket Management Web Application** built with **Twig
 
 ## 📂 Project Structure
 
-TMA0.1/ │ ├── base.html        # Landing page ├── auth.html         # Login & Signup pages ├── dashboard.html   # Ticket dashboard ├── main.js           # Frontend interactions ├── style.css            # Images and icons
+TMA0.1/ │ ├── index.html        # Landing page ├── auth.html         # Login & Signup pages ├── dashboard.html   # Ticket dashboard ├── main.js           # Frontend interactions ├── style.css            # Images and icons
 
 ## 📄 Notes
 This is a **frontend-only demo** (mock app) built for the Multi-Framework Ticket Management assignment. No backend or database connection is included.

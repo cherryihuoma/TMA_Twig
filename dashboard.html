@@ -1,14 +1,14 @@
-k<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ticket Manager — Dashboard</title>
+  <title>Tasket — Dashboard</title>
   <link rel="stylesheet" href="style3.css" />
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">TicketManager</div>
+    <div class="logo">Tasket</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="ticket.html">Tickets</a>
@@ -43,12 +43,12 @@ k<!doctype html>
 
   <script src="main.js"></script>
   <script>
-    // protect page
+    
     if (!localStorage.getItem('ticketapp_session')) {
       alert('Your session has expired — please log in again.');
       window.location.href = 'auth.html';
     }
-    // dashboard stats updated on load by main.js
+
   </script>
 </body>
 </html>

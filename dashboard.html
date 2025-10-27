@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ticket Manager — Dashboard</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">TicketManager</div>
+    <nav>
+      <a href="base.html">Home</a>
+      <a href="ticket.html">Tickets</a>
+      <button id="logoutBtn" class="btn" style="margin-left:12px">Logout</button>
+    </nav>
+  </header>
+
+  <main class="site-container">
+    <section class="dashboard">
+      <div class="stat-box">
+        <h3>Total Tickets</h3>
+        <p id="statTotal">0</p>
+      </div>
+      <div class="stat-box">
+        <h3>Open</h3>
+        <p id="statOpen">0</p>
+      </div>
+      <div class="stat-box">
+        <h3>In Progress</h3>
+        <p id="statInProgress">0</p>
+      </div>
+      <div class="stat-box">
+        <h3>Closed</h3>
+        <p id="statClosed">0</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tasket</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // protect page
+    if (!localStorage.getItem('ticketapp_session')) {
+      alert('Your session has expired — please log in again.');
+      window.location.href = 'auth.html';
+    }
+    // dashboard stats updated on load by main.js
+  </script>
+</body>
+</html>

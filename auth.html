@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ticket Manager — Login / Signup</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">TicketManager</div>
+    <nav>
+      <a href="base.html">Home</a>
+      <a href="auth.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="site-container">
+    <section class="auth-page" aria-labelledby="auth-title">
+      <div class="auth-card" role="form" aria-live="polite">
+        <h2 id="auth-title">Login</h2>
+
+        <form id="loginForm" novalidate>
+          <input type="text" id="loginUsername" name="username" placeholder="Username" required>
+          <div class="inline-error" id="loginError" aria-hidden="true"></div>
+          <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+          <button type="submit" class="btn">Login</button>
+        </form>
+
+        <hr style="margin:1rem 0; opacity:.12">
+
+        <h3>Create account</h3>
+        <form id="signupForm" novalidate>
+          <input type="text" id="signupUsername" name="username" placeholder="Choose a username" required>
+          <div class="inline-error" id="signupError" aria-hidden="true"></div>
+          <input type="password" id="signupPassword" name="password" placeholder="Choose a password" required>
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+
+        <p style="margin-top:1rem; font-size:.9rem; color:#666">Note: Authentication is simulated using localStorage (key: <code>ticketapp_session</code>).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tasket</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

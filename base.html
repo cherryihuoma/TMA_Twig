@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ticket Manager — Home</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🎟Tasket</div>
+    <nav>
+      <a href="base.html">Home</a>
+      <a href="auth.html">Login</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="site-container">
+    <section class="hero" role="region" aria-label="Hero">
+      <div class="circle" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220" preserveAspectRatio="none" role="img" aria-labelledby="heroWaveTitle heroWaveDesc">
+  <title id="heroWaveTitle">Hero wave background</title>
+  <desc id="heroWaveDesc">A transparent white wavy shape for the bottom edge of the hero section.</desc>
+
+  <defs>
+    <!-- Transparent white gradient -->
+    <linearGradient id="gHero" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.2)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.15)" />
+    </linearGradient>
+
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="-6" stdDeviation="18" flood-color="#ffffff" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <path d="M0,120 C180,70 360,20 540,48 C720,76 900,180 1080,160 C1260,140 1320,110 1440,96 L1440,220 L0,220 Z"
+        fill="url(#gHero)" filter="url(#shadow)"/>
+
+  <path d="M0,112 C180,62 360,12 540,40 C720,68 900,170 1080,150 C1260,130 1320,100 1440,86 L1440,96 L0,96 Z"
+        fill="rgba(255,255,255,0.05)"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="c1Title c1Desc">
+  <title id="c1Title">Decorative circle 1</title>
+  <desc id="c1Desc">Large translucent decorative circle in transparent white.</desc>
+
+  <defs>
+    <radialGradient id="cg1" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="120" cy="120" r="100" fill="url(#cg1)" />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="c2Title c2Desc">
+  <title id="c2Title">Decorative circle 2</title>
+  <desc id="c2Desc">Small accent circle in transparent white.</desc>
+
+  <circle cx="60" cy="60" r="60" fill="rgba(255,255,255,0.2)" />
+</svg>
+</svg>
+      </div>
+
+      <div class="hero-content">
+        <h1>Manage Tickets Effortlessly</h1>
+        <p>Track, update and resolve tickets — fast and simple.</p>
+        <div class="buttons">
+          <a href="auth.html" class="btn primary">Get Started</a>
+          <a href="dashboard.html" class="btn secondary" id="dashboardBtn" style="display:none;">Go to Dashboard</a>
+        </div>
+      </div>
+
+      <div class="wave" aria-hidden="true">
+        <!-- optional: inline SVG or use background image -->
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#ffffff" d="M0,96L80,117.3C160,139,320,181,480,197.3C640,213,800,203,960,176C1120,149,1280,107,1360,85.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      </div>
+    </section>
+
+    <section class="features">
+      <h3>App Highlights</h3>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h4>Fast Ticketing</h4>
+          <p>Create and manage tickets locally in your browser.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Protected Routes</h4>
+          <p>Dashboard and Tickets require login (simulated session).</p>
+        </div>
+        <div class="feature-box">
+          <h4>Consistent Design</h4>
+          <p>Same layout rules as other framework versions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tasket</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // show dashboard button if logged in
+    if (localStorage.getItem('ticketapp_session')) {
+      document.getElementById('dashboardBtn').style.display = 'inline-block';
+    }
+  </script>
+</body>
+</html>

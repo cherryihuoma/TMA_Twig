@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tasket — Tickets</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">TicketManager</div>
+    <nav>
+      <a href="base.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <button id="logoutBtn2" class="btn" style="margin-left:12px">Logout</button>
+    </nav>
+  </header>
+
+  <main class="site-container">
+    <section class="ticket-form card" aria-labelledby="tickets-title">
+      <h2 id="tickets-title">Create / Edit Ticket</h2>
+
+      <form id="ticketForm" novalidate>
+        <input type="hidden" id="ticketId">
+        <label class="sr-only" for="title">Title</label>
+        <input id="title" name="title" placeholder="Title" required>
+
+        <label class="sr-only" for="status">Status</label>
+        <select id="status" name="status" required>
+          <option value="">-- Select status --</option>
+          <option value="open">open</option>
+          <option value="in_progress">in_progress</option>
+          <option value="closed">closed</option>
+        </select>
+
+        <textarea id="description" name="description" rows="3" placeholder="Description (optional)"></textarea>
+
+        <div class="inline-error" id="ticketFormError" aria-hidden="true"></div>
+
+        <button type="submit" class="btn">Save Ticket</button>
+      </form>
+    </section>
+
+    <section class="ticket-list">
+      <h3 style="text-align:center; color:#0077ff; margin-top:1rem">All Tickets</h3>
+      <div id="ticketList" style="margin-top:1rem"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tasket</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // protect page
+    if (!localStorage.getItem('ticketapp_session')) {
+      alert('Unauthorized — please log in.');
+      window.location.href = 'auth.html';
+    }
+  </script>
+</body>
+</html>
